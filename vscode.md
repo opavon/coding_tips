@@ -34,3 +34,36 @@ Useful VSCode extensions - you can see your installed extensions on the `Extensi
     * `vscode-pdf`
  
 ## Settings
+
+```
+{
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.rulers": [80, {"column": 120, "color": "#ffcc00"}],
+    "files.autoSave": "onFocusChange",
+    "notebook.lineNumbers": "on",
+    "security.workspace.trust.untrustedFiles": "open",
+    "themeswitcher.utcOffset": 1,
+    "themeswitcher.mappings": [
+        {
+            "time": "06:00",
+            "theme": "Solarized Dark"
+        },
+        {
+            "time": "07:00",
+            "theme": "Brackets Light Pro"
+        },
+        {
+            "time": "18:30",
+            "theme": "Solarized Dark"
+        }
+    ],
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.colorTheme": "Brackets Light Pro",
+    "workbench.sideBar.location": "left",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.decorations.colors": false,
+}
+```
