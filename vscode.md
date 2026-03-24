@@ -87,3 +87,11 @@ The `settings.json` below worked as of Visual Studio Code 1.112.
     "workbench.colorTheme": "Solarized Dark",
 }
 ```
+
+ 
+## Shortcuts
+
+* `Ctrl+Shift+P`: open the Command Palette in VSCode
+* `Ctrl+Shift+V`: preview a markdown file
+* `Ctrl+b`: toggle left sidebar on/off (or make selection bold if in a `.md` file)
+* `Ctrl+'`: open/close terminal in VSCode
