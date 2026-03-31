@@ -1,25 +1,38 @@
-# Python 3.x Standalone Installation and VSCode Setup
+# Setting up Python and UV
 
-This section outlines the steps to install Python 3.x independently of Anaconda, configure VSCode to use it for specific projects, and maintain compatibility with existing Anaconda environments.
+The sections below detail the steps to implement a clean Python install along with UV for environment management.
+
+- [Python installation and VSCode setup](#python-installation-and-vscode-setup)
+    - [Install standalone Python](#install-standalone-python)
+    - [Adjust PATH for standalone Python](#adjust-path-for-standalone-python)
+    - [Configure VSCode project with standalone Python](#configure-vscode-project-with-standalone-python)
+- [UV installation for environment management](#uv-installation-for-environment-management)
+    - [Install UV and initialise a project in VSCode](#install-uv-and-initialise-a-project-in-vscode)
+    - [Install and manage dependencies with UV](#install-and-manage-dependencies-with-uv)
+    - [Sync an existing project with UV](#sync-an-existing-project-with-uv)
 
 ---
 
-## 1. Install Standalone Python 3.9
+## Python installation and VSCode setup
 
-1. Download the installer from [Python.org](https://www.python.org/downloads/).
+This section outlines the steps to install Python 3.x independently of Anaconda, configure VSCode to use it for specific projects, while maintaining compatibility with existing Anaconda environments.
+
+### Install standalone Python
+
+1. Download the installer of your required version from [Python.org](https://www.python.org/downloads/).
 
 2. Run the installer with the following settings:
 
-    - Check **Add Python 3.x to PATH**
+    - Check `Add Python 3.x to PATH`
     - Customize installation:
         - Keep `pip`
         - Install to `C:\Program Files\Python3x` (outside Anaconda)
 
-## 2. Adjust PATH for Standalone Python
+### Adjust PATH for standalone Python
 
-1. Open System Properties with `Win + R → sysdm.cpl → Enter → Advanced → Environment Variables`
+1. Open `System Properties` with `Win + R → sysdm.cpl → Enter → Advanced → Environment Variables`
 
-2. Under System variables → Path:
+2. Under `System variables → Path`:
 
     - Add (if missing):
 
@@ -32,7 +45,7 @@ This section outlines the steps to install Python 3.x independently of Anaconda,
 
 3. Close and reopen terminals for changes to take effect.
 
-4. Verify:
+4. In a new `CMD` terminal in VSCode, verify:
 
     ```bash
     where python
@@ -47,9 +60,9 @@ This section outlines the steps to install Python 3.x independently of Anaconda,
 
     Note: The first path is used when running python.
 
-## 3. Configure VSCode for Python 3.x
+### Configure VSCode project with standalone Python
 
-1. Open your project folder in VSCode.
+1. Open your project folder in VSCode. You can find instructions for a clean VSCode install [here](/vscode.md).
 
 2. Press `Ctrl+Shift+P` → `Python: Select Interpreter`.
 
@@ -81,18 +94,17 @@ This section outlines the steps to install Python 3.x independently of Anaconda,
 
 You have now a clean Python installation independent from Anaconda.
 
+---
 
-# UV for Environment Management
+## UV installation for environment management
 
 This section outlines the steps to install UV and create an environment with the necessary requirements for the project. You can check the [UV documentation](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer) for up to date instructions.
 
----
+### Install UV and initialise a project in VSCode
 
-## 1. Install UV and initialise a project in VSCode
+1. In a VSCode `CMD` terminal of a project using the recently installed standalone Python version:
 
-1. In the VSCode terminal (using Python 3.x):
-
-    **Note**: you can skip this if you already have UV installed.
+    **Note**: you can skip to step 2 if you already have UV installed.
 
     ```powershell
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
@@ -108,13 +120,13 @@ This section outlines the steps to install UV and create an environment with the
     curl -LsSf https://astral.sh/install.sh | sh
     ```
 
-2. Verify the installed version in your VSCode terminal:
+2. Verify the installed version of UV in your VSCode terminal:
 
     ```bash
     uv --version
     ```
 
-3. Initialize your project:
+3. Initialize a new UV project:
 
     ```bash
     uv init
@@ -131,7 +143,7 @@ This section outlines the steps to install UV and create an environment with the
         - Ensures the Python environment matches the lockfile exactly so collaborators get the same package versions.
         - Updates the lockfile if necessary.
 
-## 2. Install and manage dependencies with UV
+### Install and manage dependencies with UV
 
 1. Install a package and add it to `pyproject.toml`:
 
@@ -143,7 +155,7 @@ This section outlines the steps to install UV and create an environment with the
 
 2. Run `uv sync` and push the updated `pyproject.toml` and `uv.lock` to the repository for other users.
 
-## 3. Sync an existing project that uses UV
+### Sync an existing project with UV
 
 1. Prerequisites
 
