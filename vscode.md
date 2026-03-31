@@ -1,5 +1,7 @@
 # Setting up VSCode
 
+The sections below detail the steps to implement a clean VSCode install, with some useful extensions, settings, and shortcuts.
+
 - [Install required software](#install-required-software)
 - [Extensions](#extensions)
 - [Settings](#settings)
@@ -7,6 +9,7 @@
    - [User settings](#user-settings)
 - [Shortcuts](#shortcuts)
 
+---
 
 ## Install required software
 
