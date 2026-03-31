@@ -1,16 +1,20 @@
-# Basic Setup
-
-* Download `VSCode` from https://code.visualstudio.com/download
-* Download `Git` from https://git-scm.com/install/
-* Download `GitHub Desktop` from https://desktop.github.com/download/
-* Download `Docker Desktop` from https://www.docker.com/products/docker-desktop/
-
 # Setting up VSCode
 
-## Default terminal
+- [Install required software](#install-required-software)
+- [Extensions](#extensions)
+- [Settings](#settings)
+   - [Default terminal](default-terminal)
+   - [User settings](#user-settings)
+- [Shortcuts](#shortcuts)
 
-If using VSCode on Windows, make sure you select `Cmd` as your default terminal.
-* To do this, open the Command Palette in VSCode with `Ctrl+Shift+P`. Type in `>Terminal: Select Default Profile` and choose `Command Prompt`.
+
+## Install required software
+
+* Download and install `VSCode` from https://code.visualstudio.com/download
+* Download and install `Git` from https://git-scm.com/install/
+* Download and install `GitHub Desktop` from https://desktop.github.com/download/
+* Download and install `Docker Desktop` from https://www.docker.com/products/docker-desktop/
+
 
 ## Extensions
 
@@ -33,8 +37,16 @@ Useful VSCode extensions - you can see your installed extensions on the `Extensi
     * `Theme Switcher`
     * `vscode-icons`
     * `vscode-pdf`
+
  
 ## Settings
+ 
+### Default terminal
+
+If using VSCode on Windows, make sure you select `Cmd` as your default terminal.
+* To do this, open the Command Palette in VSCode with `Ctrl+Shift+P`. Type in `>Terminal: Select Default Profile` and choose `Command Prompt`.
+ 
+### User settings
 
 You can modify your settings in VSCode with `Ctrl+Shift+P` and typing in `>Preferences: Open User Settings (JSON)`.
 
@@ -88,7 +100,7 @@ The `settings.json` below worked as of Visual Studio Code 1.112.
 }
 ```
 
- 
+
 ## Shortcuts
 
 * `Ctrl+Shift+P`: open the Command Palette in VSCode
